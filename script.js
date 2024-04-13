@@ -4,6 +4,13 @@ const container = document.querySelector(`#container`);
 
 const buttons = Array.from(document.querySelectorAll("button"));
 const funcBtns = buttons.filter(btn => btn.innerHTML !== 'Generate Array');
+const refreshBtn = buttons.filter(btn => btn.id === "refreshPage");
+
+funcBtns.forEach(btn => btn.addEventListener("click", () => {
+    refreshBtn[0].innerHTML = "Refresh Page";
+    funcBtns.forEach(btn => btn.disabled = true);
+}));
+
 
 function init() {
     for (let i = 0; i < n; i++) {

@@ -28,6 +28,10 @@ body {
     min-height: 100vh;
 }
 
+hr {
+    width: 50%;
+}
+
 .container {
     height: 400px;
     display: flex;
